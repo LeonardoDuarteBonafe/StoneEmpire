@@ -253,7 +253,7 @@ header nav .fundo{
 }
 
 .carousel-indicators li{
-    background-image: url('Images/Carousel-Top/botao.png') !important;
+    background-image: url('Images/Index/Carousel-Top/botao.png') !important;
     background-color: transparent!important;
     background-size: contain;
     background-position: center;
@@ -534,6 +534,7 @@ transition-delay: 0.5s;
     padding: 5px;
     width: auto !important;
     font-family: barlowExtraLight;
+    text-transform: uppercase;
 }
 
 /*.best-sellers */.swiper .swiper-slide a img{
