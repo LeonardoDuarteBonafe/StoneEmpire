@@ -78,6 +78,38 @@ window.addEventListener("DOMContentLoaded", function () {
         },
     });
     
+    function productFilter(){
+        var materialType = localStorage.getItem("materialType");
+       /* var materialColor = localStorage.getItem("materialColor");*/
+
+        $('.productBox').hide('0');
+
+        $('.nossos-produtos .materials #'+materialType).addClass('activeMaterial').siblings().removeClass('activeMaterial');
+
+        $('.nossos-produtos .colors #'+materialColor).addClass('activeColor').siblings().removeClass('activeColor');
+
+        if(materialType == "all" || materialColor == "all"){
+            if(materialType == "all"){
+                if($('.nossos-produtos .materials div').filter('.material-menu').is(":visible"))
+                {
+                    $('.nossos-produtos .materials div').filter('.material-menu').slideUp('0');
+                }
+                $('.productBox').filter('.'+materialColor).fadeIn('1000');
+            } 
+            if(materialColor == "all"){
+                if($('.nossos-produtos .colors div').filter('.color-menu').is(":visible"))
+                {
+                    $('.nossos-produtos .colors div').filter('.color-menu').slideUp('slow');
+                }
+                $('.productBox').filter('.'+materialType).fadeIn('1000');
+            }
+        }
+        else{
+            $('.productBox').filter('.'+materialType).fadeIn('1000');
+            $('.productBox').not('.'+materialColor).hide();
+        }
+    }
+    
     $('.materiais .topbar .menu p').click(function(){
         var id = $(this).attr('id');
         var imageUrl = "Images/Materiais/" + id;
