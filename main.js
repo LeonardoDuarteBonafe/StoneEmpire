@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", function () {
 
     AOS.init();
-    
+
     var swiper = new Swiper(".swiperBestSeller", {
         slidesPerView: 4,
         spaceBetween: 30,
@@ -9,8 +9,8 @@ window.addEventListener("DOMContentLoaded", function () {
         loop: true,
         loopFillGroupWithBlank: true,
         autoplay: {
-          delay: 1000,
-          disableOnInteraction: false,
+            delay: 1000,
+            disableOnInteraction: false,
         },
         pagination: {
             el: ".swiper-pagination",
@@ -21,25 +21,25 @@ window.addEventListener("DOMContentLoaded", function () {
             prevEl: ".swiper-button-prev",
         },
         breakpoints: {
-          300: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },  
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
+            300: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },  
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
         },
     });
-    
+
     var swiper = new Swiper(".swiperMaterials", {
         slidesPerView: 4,
         spaceBetween: 30,
@@ -47,8 +47,8 @@ window.addEventListener("DOMContentLoaded", function () {
         loop: true,
         loopFillGroupWithBlank: true,
         autoplay: {
-          delay: 1000,
-          disableOnInteraction: false,
+            delay: 1000,
+            disableOnInteraction: false,
         },/*
         pagination: {
             el: ".swiper-pagination",
@@ -59,94 +59,99 @@ window.addEventListener("DOMContentLoaded", function () {
             prevEl: ".swiper-button-prev",
         },*/
         breakpoints: {
-          300: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },  
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
+            300: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },  
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
         },
     });
+
+    $('.materials-page .all-materials .menu ul').click(function(){
+        materialType = $(this).attr('data-material');
+        console.log("clicado : " + materialType);
+        localStorage.setItem("materialType", materialType);
+        productFilter();
+    })
     
     function productFilter(){
         var materialType = localStorage.getItem("materialType");
-       /* var materialColor = localStorage.getItem("materialColor");*/
+        //var lastStatusOfAll = localStorage.getItem("lastStatusOfAll");
+        /* var materialColor = localStorage.getItem("materialColor");*/
 
-        $('.productBox').hide('0');
+        //$('.productBox').hide('0');
+        var lastStatusOfAll = $('.materials-page .all-materials .menu ul').attr('class');
+        console.log("status: " + lastStatusOfAll);
+        $('.materials-page .all-materials .menu #'+materialType).addClass('activeMaterial').siblings().removeClass('activeMaterial');
 
-        $('.nossos-produtos .materials #'+materialType).addClass('activeMaterial').siblings().removeClass('activeMaterial');
+        /*$('.nossos-produtos .colors #'+materialColor).addClass('activeColor').siblings().removeClass('activeColor');*/
 
-        $('.nossos-produtos .colors #'+materialColor).addClass('activeColor').siblings().removeClass('activeColor');
-
-        if(materialType == "all" || materialColor == "all"){
-            if(materialType == "all"){
-                if($('.nossos-produtos .materials div').filter('.material-menu').is(":visible"))
-                {
-                    $('.nossos-produtos .materials div').filter('.material-menu').slideUp('0');
-                }
-                $('.productBox').filter('.'+materialColor).fadeIn('1000');
-            } 
-            if(materialColor == "all"){
-                if($('.nossos-produtos .colors div').filter('.color-menu').is(":visible"))
-                {
-                    $('.nossos-produtos .colors div').filter('.color-menu').slideUp('slow');
-                }
-                $('.productBox').filter('.'+materialType).fadeIn('1000');
-            }
+        if(materialType == "all"){
+            /*$('.nossos-produtos .materials div').filter('.material-menu').slideUp('0');
+            $('.productBox').filter('.'+materialColor).fadeIn('1000');*/
+            $('.productBox').fadeIn('1000');
+            //lastStatusOfAll = true;
+            //localStorage.setItem("lastStatusOfAll", lastStatusOfAll);
+            
+            //$('.productBox').fadeIn('1000');
         }
         else{
+            /*if(lastStatusOfAll != null){
+                $('.productBox').fadeOut('0');
+            }*/
             $('.productBox').filter('.'+materialType).fadeIn('1000');
-            $('.productBox').not('.'+materialColor).hide();
+            $('.productBox').not('.'+materialType).hide();
         }
     }
-    
+
     $('.materiais .topbar .menu p').click(function(){
         var id = $(this).attr('id');
         var imageUrl = "Images/Materiais/" + id;
-        
+
         //mudar
         //$('.page-empresa .empresa .images .grande div img').attr('src', imageUrl + imageClicadaId + ".webp");
-        
+
         $('.materiais .imagens .small').children("img").eq(0).attr('src', imageUrl + "/small1.png");
         $('.materiais .imagens .small').children("img").eq(1).attr('src', imageUrl + "/small2.png");
         $('.materiais .imagens .big').children("img").attr('src', imageUrl + "/big.png");
-        
+
         $(this).addClass('active-material').siblings().removeClass('active-material');
-        
+
         $('.materiais .imagens .small').children("img").eq(0).addClass('active-image');
         $('.materiais .imagens .small').children("img").eq(1).addClass('active-image');
         $('.materiais .imagens .big').children("img").addClass('active-image');
-        
+
         $('.materiais .imagens .small').children("img").eq(0).on("animationend", function(){
             $(this).removeClass('active-image');
         }); 
-       $('.materiais .imagens .small').children("img").eq(1).on("animationend", function(){
+        $('.materiais .imagens .small').children("img").eq(1).on("animationend", function(){
             $(this).removeClass('active-image');
         }); 
         $('.materiais .imagens .big').children("img").on("animationend", function(){
             $(this).removeClass('active-image');
         }); 
     })
-    
+
     $('.galeria .imagens img').click(function(){
         var imagemPequenaId = $(this).attr('id');
         var imagemGrandeId = $('.galeria .banner img').attr('id');
         var imagemUrl = "Images/Galeria/imagem";
         console.log("clicou" + imagemPequenaId);
-        
+
         $('.galeria .banner img').attr('id', imagemPequenaId);
         $('.galeria .banner img').attr('src', imagemUrl + imagemPequenaId + ".png");
-        
+
         $(this).attr('id', imagemGrandeId);
         $(this).attr('src',  imagemUrl + imagemGrandeId + ".png");
         /*var imageGrandeId = $('.empresa .imagens .grande img').attr('id');
@@ -156,7 +161,7 @@ window.addEventListener("DOMContentLoaded", function () {
         $(this).attr('id', imageGrandeId);
         $(this).attr('src', 'Images/Index/Empresa/imagem' + imageGrandeId + ".webp");*/
     });
-    
+
     var language = {
         eng: {
             navbar: {
@@ -216,13 +221,13 @@ window.addEventListener("DOMContentLoaded", function () {
                     title: "MATERIALS LINE",
                 },
             },
-            
+
         },
         pt: {
 
         }
     };
-    
+
     var pageLanguage = localStorage.getItem("language");
     if(pageLanguage == "eng"){
         //navbar
@@ -231,20 +236,20 @@ window.addEventListener("DOMContentLoaded", function () {
         $('nav .nav-list').children("li").eq(2).children("a").text(language.eng.navbar.materiais);
         $('nav .nav-list').children("li").eq(3).children("a").text(language.eng.navbar.jazidas);
         $('nav .nav-list').children("li").eq(4).children("a").text(language.eng.navbar.contato);
-        
+
         //top-carousel-info
         $('#top-carousel-info .text').text(language.eng.top_carousel_info.text);
-        
+
         //destaques
         $('.destaques .title').text(language.eng.destaques.title);
-        
+
         //materiais
         $('.materiais .title').text(language.eng.materiais.title);
-        
+
         //jazidas
         $('.jazidas .title').text(language.eng.jazidas.title);
         $('.jazidas .text').text(language.eng.jazidas.text);
-        
+
         //form
         $('.contato .title').text(language.eng.form.title);
         $('.form #nome').attr("placeholder", language.eng.form.nome);
@@ -255,14 +260,14 @@ window.addEventListener("DOMContentLoaded", function () {
         $('.form #estado').attr("placeholder", language.eng.form.estado);
         $('.form #mensagem').attr("placeholder", language.eng.form.mensagem);
         $('.buttonEmail').text(language.eng.form.enviar);
-        
+
         //page-empresa
         $(".page-empresa .empresa .title").text(language.eng.navbar.empresa);
         $(".page-empresa .empresa .info .text p").html(language.eng.empresa.text);
-        
+
         //page-materiais
         $('.page-materiais .jazida .title').text(language.eng.page_materiais.jazida.title);
-        
+
         $('.page-materiais .linha .title').text(language.eng.page_materiais.linha.title);
     }
 
@@ -277,11 +282,11 @@ window.addEventListener("DOMContentLoaded", function () {
     $('.whatsapp').click(function(){
         window.open('https://api.whatsapp.com/send?phone=5528999187924&text=Ol%C3%A1%2C+tenho+interesse+no+seu+produto!', '_blank'); 
     });
-    
+
     $('.instagram').click(function(){
         window.open('https://www.instagram.com/margilgranitos/', '_blank'); 
     });
-    
+
     $('.facebook').click(function(){
         window.open('https://www.facebook.com/MARGILGRANITOSEMARMORES', '_blank'); 
     });
@@ -356,7 +361,7 @@ window.addEventListener("DOMContentLoaded", function () {
         window.location.href = "materiais.php";
 
     });
-    
+
     $('.destaques .box').click(function(){
         localStorage.setItem("nameMaterial", $(this).attr('id'));
         localStorage.setItem("clickedMaterial", "true");

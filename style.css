@@ -48,29 +48,33 @@ h1{
 }
 
 /*p{
-    color: var(--primary-color);
+color: var(--primary-color);
 }*/
 
 /*
 .whatsapp-fixed {
-    position: fixed;
-    right: 50px;
-    bottom: 50px;
-    width: 40px;
-    height: 40px;
-    z-index: 100;
-    cursor: pointer;
+position: fixed;
+right: 50px;
+bottom: 50px;
+width: 40px;
+height: 40px;
+z-index: 100;
+cursor: pointer;
 }
 
 .whatsapp-fixed img{
-    width: 100%;
-    transition: 0.5s;
+width: 100%;
+transition: 0.5s;
 }
 
 .whatsapp-fixed:hover img{
-    transform: scale(1.35);
+transform: scale(1.35);
 }
 */
+
+.sumir{
+    display: none;
+}
 
 
 header{
@@ -82,23 +86,23 @@ header{
 }
 
 /*header .language{
-    background-color: #EDEDED;
-    width: 100%;
-    text-align: right;
-    height: 40px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 20%;
+background-color: #EDEDED;
+width: 100%;
+text-align: right;
+height: 40px;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding-right: 20%;
 }
 
 header .language a{
-    padding: 0 5px;
-    color: var(--primary-color);
+padding: 0 5px;
+color: var(--primary-color);
 }
 
 header .language a:nth-child(4){
-    border-right: 1px solid var(--primary-color);
+border-right: 1px solid var(--primary-color);
 }*/
 
 /*.social-icon img{
@@ -316,7 +320,7 @@ header nav .fundo{
 }
 
 /*#top-carousel-info .carousel-inner{
-    position: relative;
+position: relative;
 }*/
 
 /*#top-carousel-info .text{
@@ -955,7 +959,7 @@ footer p{
 
 .materials-page header nav .social{
     position: absolute;
-     top: 50%;
+    top: 50%;
     right: 30px;
     transform: translate(-50%, -50%);
 }
@@ -1028,4 +1032,431 @@ footer p{
 
 /*.materials-page .all-materials */.container-imagens .box:hover img{
     transform: scale(1.05);
+}
+
+.materials-page .activeMaterial{
+    font-size: 1.35rem;
+    color: var(--primary-color);
+}
+
+.materials-page .all-materials .menu {
+    height: 80px;   
+    /background-color: aqua;
+}
+
+.materials-page .all-materials .menu ul{
+    display: flex;
+    align-items: center;
+}
+
+
+
+@media (max-width: 991px){
+
+    header nav .mobile-menu{
+        display: none;
+        cursor: pointer;
+    }
+
+    header nav .mobile-menu div{
+        width: 32px;
+        height: 2px;
+        background: var(--primary-color);
+        margin: 8px;
+        transition: 0.3s;
+        z-index: 10;
+        background-color: white !important;
+    }
+
+    header nav{
+        padding: 0 30px 0 45px;
+        height: 100px;
+    }
+
+    header nav .logo{
+        width: 150px !important;
+    }
+
+    header nav .logo a img{
+        width: 100% !important;
+        object-fit: cover;
+    }
+
+    header nav .nav-list{
+        position: absolute;
+        top: 100px;
+        right: 0;
+        width: 300px !important;
+        height: 250px;
+        padding: 0 !Important;
+        background: white;
+        z-index: 100;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        /border: 1px solid var(--primary-color);
+    }
+
+    header nav .nav-list li{
+        margin: 0;
+        opacity: 0;
+        /border: none;
+    }
+
+    header nav .nav-list li a{
+        color: var(--primary-color) !important;
+    }
+
+    header nav .mobile-menu{
+        display: block;
+        background-color: var(--primary-color);
+        border-radius: 15%;
+    }
+
+    header nav .mobile-menu.active .line1{
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+
+    header nav .mobile-menu.active .line2{
+        opacity: 0;
+    }
+
+    header nav .mobile-menu.active .line3{
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
+
+    header nav .nav-list.active{
+        transform: translateX(0);
+    }
+
+    @keyframes navLinkFade{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px)
+{
+
+}
+
+@media only screen and (max-width: 767px)
+{
+    .carousel-indicators li{
+        /margin-right: 30px !important;
+    }
+
+    .carousel-indicators{
+        width: 80px;
+    }
+
+    /*#top-carousel */.carousel-indicators{
+        /bottom: 20% !important;
+        bottom: 0 !important;
+        /left: 95%;
+        top: 50% !important;
+        left: 90% !important;
+        transform: translate(-50%, -50%) !important;
+        /*ARRUMAR - alinhar no centro*/
+    }
+
+    /*#top-carousel */.carousel-inner .carousel-item .nome{
+        /background-color: aquamarine;
+        position: absolute;
+        color: white;
+        bottom: 40px;
+        left: 30px;
+        width: 180px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        border-style: solid;
+        border-left-style: none;
+        border-color: var(--primary-color);
+    }
+
+    /*#top-carousel */.carousel-inner .carousel-item .nome p{
+        margin: 0px 15px 0px 0;
+        font-size: 1.5rem;
+        text-align: right;
+    }
+
+    .carousel-inner{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    /*#top-carousel-info .carousel-inner{
+    position: relative;
+}*/
+
+    /*#top-carousel-info .text{
+    position: absolute;
+    text-transform: uppercase;
+    margin: 0;
+    height: calc(100% - 55px);
+    right: 10px;
+    bottom: 0;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+}*/
+
+    .carousel-inner .carousel-item{
+        height: 350px !important;
+    }
+
+    /*#top-carousel */.carousel-inner .carousel-item img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /*.top-info{
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--primary-color);
+    font-family: barlowSemiBold;
+    padding: 20px 0;
+}*/
+
+    .top-info h1{
+        width: 90% !important;
+        margin: 0 auto !important;
+        color: white !important;
+        font-size: 1.5em !important;
+    }
+
+
+
+    /*    .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+    .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /background: #eee;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}*/
+
+    /*.swiper-button-next,
+    .swiper-button-prev{
+    color: white !important;
+    background-color:rgba(217,179,35,0.5);
+    width: 45px !important;
+    height: 55px !important;
+    border-radius: 50%;
+    transition: 0.5s;
+}*/
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover{
+        color: white !important;
+        background-color:rgba(217,179,35,1);
+    }
+
+    .best-sellers{/*
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;*/
+        padding: 20px 0;
+        /*
+        /background-color: green;
+        overflow: hidden;
+        position: relative;*/
+    }
+
+    h1{
+        font-size: 3em !important;
+        margin-bottom: 10px !important;
+    }
+
+    h2{
+        font-size: 2em !important;
+    }
+
+    .best-sellers .mySwiper{
+        width: 60%;
+    }
+
+    .mySwiper{
+        max-width: 250px !important;
+    }
+
+    /*.best-sellers */.swiper .swiper-slide{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        /background-color: aqua;
+    }
+
+    /*.best-sellers */.swiper .swiper-slide a{
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .best-sellers .swiper .swiper-slide a{
+        height: 300px;
+    }
+
+    .swiper .swiper-slide p{
+        font-size: 1.2em;
+    }
+
+
+    .best-sellers .swiper-button-next,
+    .best-sellers .swiper-button-prev{
+        top: 280px;
+    }
+
+    .btn-more{
+        margin: 5px 15px 5px 0 !important;
+    }
+
+    /*.carried-out */.menu{
+        flex-wrap: wrap;
+    }
+
+    /*.carried-out */.menu ul{
+        margin: 3px 5px;
+        padding: 2px 5px;;
+    }
+
+    .carried-out .div-btn{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .quarry-info{
+        padding: 30px 0;
+        /*/background-color: aqua;
+        margin: 0 !important;
+        display: flex;
+        flex-wrap: wrap;*/
+    }
+
+    .quarry-info h2{
+        font-size: 1.65em;
+        width: 100% !important;
+        margin-right: 0px !important;
+        /background-color: yellow !important;
+    }
+
+    .quarry-info h1{
+        font-size: 6em;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .quarry-info h1:nth-child(2){
+        width: auto;
+    }
+
+    .quarry-info .title{
+        width: 100%;
+        text-align: center;
+        padding: 0 0px;
+    }
+
+    .quarry-info p{
+        width: 100%;
+        text-align: center;
+        padding: 10px 20px !important;
+    }
+
+    .our-finishes{
+        padding: 30px 10px;
+    }
+
+    .our-finishes h2{
+        width: 100%;
+        text-align: center;
+    }
+
+    .our-finishes h1{
+        width: 100%;
+        text-align: center;
+    }
+
+    .our-finishes p{
+        margin-top: 0px;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .contato{
+        flex-direction: column;
+        padding: 0px 0;
+    }
+
+    .contato .logo{
+        width: 80%;
+        margin: auto!important;
+    }
+
+    .contato .logo img{
+        width: 100%;
+    }
+
+    .contato .form{
+        width: 100%;
+    }
+
+    .contato .form h1{
+        text-align: center;
+    }
+
+    .contato .form input{
+        width: 250px !important;
+        font-size: 0.8em;
+        height: 40px;
+    }
+
+    .contato .form button{
+        margin: 10px 65px !important;
+        height: 30px;
+    }
+    
+    footer{
+    padding: 20px 0;
+}
+
+footer .logo{
+    width: 250px;
+}
+
+
+footer p{
+    width: 70%;
+    font-size: 1.5em;
+}
+
 }
