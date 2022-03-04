@@ -8,10 +8,10 @@ window.addEventListener("DOMContentLoaded", function () {
         slidesPerGroup: 1,
         loop: true,
         loopFillGroupWithBlank: true,
-        autoplay: {
+        /*autoplay: {
             delay: 1000,
             disableOnInteraction: false,
-        },
+        },*/
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -25,11 +25,11 @@ window.addEventListener("DOMContentLoaded", function () {
                 slidesPerView: 1,
                 spaceBetween: 20,
             },  
-            640: {
+            576: {
                 slidesPerView: 2,
                 spaceBetween: 20,
             },
-            768: {
+            767: {
                 slidesPerView: 3,
                 spaceBetween: 40,
             },
@@ -63,7 +63,7 @@ window.addEventListener("DOMContentLoaded", function () {
                 slidesPerView: 1,
                 spaceBetween: 20,
             },  
-            640: {
+            576: {
                 slidesPerView: 2,
                 spaceBetween: 20,
             },
@@ -78,12 +78,38 @@ window.addEventListener("DOMContentLoaded", function () {
         },
     });
 
+    $('.carried-out .menu ul').click(function(){
+        materialType = $(this).attr('id');
+        localStorage.setItem("materialType", materialType);
+        window.location.href = "carried-out.html";
+        //console.log("clique: " + materialType);
+    })
+    
+    $('.carried-out .btn-more').click(function(){
+        materialType = $(this).attr('id');
+        localStorage.setItem("materialType", materialType);
+        window.location.href = "carried-out.html";
+    })
+    
     $('.materials-page .all-materials .menu ul').click(function(){
         materialType = $(this).attr('data-material');
         console.log("clicado : " + materialType);
         localStorage.setItem("materialType", materialType);
         productFilter();
     })
+    
+    $(function(){
+        if($('body').is('.materials-page')){
+            /*var materialType = localStorage.getItem("materialType");
+            if(clickedMaterial == "true"){
+                jQuery(function(){
+                    jQuery('#' + nameMaterial).children("a").children("img").click();
+                    localStorage.setItem("clickedMaterial", "false");
+                });
+            }*/
+            productFilter();
+        }
+    });
     
     function productFilter(){
         var materialType = localStorage.getItem("materialType");
