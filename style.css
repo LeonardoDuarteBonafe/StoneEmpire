@@ -757,10 +757,14 @@ transition-delay: 0.5s;
 
 .quarry-info p{
     width: 60%;
+    margin: 0;
     padding-right: 15%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
     color: var(--secondary-color);
+    font-family: barlowExtraLight;
 }
 
 #our-production .carousel-inner .carousel-item{
@@ -796,6 +800,7 @@ transition-delay: 0.5s;
     padding: 0 10%;
     text-align: center;
     color: var(--secondary-color);
+    font-family: barlowExtraLight;
 }
 
 .contato{
