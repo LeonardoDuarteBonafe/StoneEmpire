@@ -77,6 +77,10 @@ window.addEventListener("DOMContentLoaded", function () {
             },
         },
     });
+    
+    $('.materials .btn-more').click(function(){
+        window.location.href = "materials.html";
+    })
 
     $('.carried-out .menu ul').click(function(){
         materialType = $(this).attr('id');
@@ -306,7 +310,7 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 
     $('.whatsapp').click(function(){
-        window.open('https://api.whatsapp.com/send?phone=5528999187924&text=Ol%C3%A1%2C+tenho+interesse+no+seu+produto!', '_blank'); 
+        window.open('https://api.whatsapp.com/send?phone=15615029409&text=Ol%C3%A1%2C+tenho+interesse+no+seu+produto!', '_blank'); 
     });
 
     $('.instagram').click(function(){
