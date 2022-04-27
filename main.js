@@ -82,6 +82,12 @@ window.addEventListener("DOMContentLoaded", function () {
         window.location.href = "materials.html";
     })
 
+    $('header .nav-list li a').click(function(){
+        materialType = $(this).attr('id');
+        localStorage.setItem("materialType", materialType);
+        //console.log("clique: " + materialType);
+    })
+    
     $('.carried-out .menu ul').click(function(){
         materialType = $(this).attr('id');
         localStorage.setItem("materialType", materialType);
