@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 4,
         spaceBetween: 30,
         slidesPerGroup: 1,
-        loop: true,
+        loop: false,
         loopFillGroupWithBlank: true,
         /*autoplay: {
             delay: 1000,
@@ -31,9 +31,9 @@ window.addEventListener("DOMContentLoaded", function () {
             },
             767: {
                 slidesPerView: 3,
-                spaceBetween: 40,
+                spaceBetween: 20,
             },
-            1024: {
+            992: {
                 slidesPerView: 4,
                 spaceBetween: 30,
             },
@@ -69,9 +69,9 @@ window.addEventListener("DOMContentLoaded", function () {
             },
             768: {
                 slidesPerView: 3,
-                spaceBetween: 40,
+                spaceBetween: 20,
             },
-            1024: {
+            992: {
                 slidesPerView: 4,
                 spaceBetween: 30,
             },
