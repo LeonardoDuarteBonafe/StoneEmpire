@@ -17,7 +17,7 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
     <link rel="stylesheet" type="text/css" href="lightbox.min.css">
     <script type="text/javascript" src="lightbox-plus-jquery.min.js"></script>
 
@@ -25,20 +25,20 @@
     <title>Stone Empire</title>
 
     <body>
-        
+
         <?php
         include 'php/navbar.html';
         include 'php/side-menu.html';
         ?>
-        
+
 
         <div id="top-carousel" class="carousel vert slide" data-ride="carousel" data-interval="5000" data-pause="false">
             <ol class="carousel-indicators">
                 <li data-target="#top-carousel" data-slide-to="0" id="0" class="active"></li>
                 <li data-target="#top-carousel" data-slide-to="1"></li><!--
-                <li data-target="#top-carousel" data-slide-to="2"></li>
-                <li data-target="#top-carousel" data-slide-to="3"></li>
-                <li data-target="#top-carousel" data-slide-to="4"></li>-->
+<li data-target="#top-carousel" data-slide-to="2"></li>
+<li data-target="#top-carousel" data-slide-to="3"></li>
+<li data-target="#top-carousel" data-slide-to="4"></li>-->
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -188,11 +188,11 @@
                         <p>sea pearl 2cm</p>
                     </div>
                     <div class="swiper-slide">
-                       <a href="Images/Index/Materials/sea-pearl-3cm.webp" data-lightbox="ourMaterialsGallery15" data-title="SEA PEARL 3CM"><img src="Images/Index/Materials/sea-pearl-3cm.webp"></a>
+                        <a href="Images/Index/Materials/sea-pearl-3cm.webp" data-lightbox="ourMaterialsGallery15" data-title="SEA PEARL 3CM"><img src="Images/Index/Materials/sea-pearl-3cm.webp"></a>
                         <p>sea pearl 3cm</p>
                     </div>
                     <div class="swiper-slide">
-                       <a href="Images/Index/Materials/shadow-storm.webp" data-lightbox="ourMaterialsGallery16" data-title="SHADOW STORM"><img src="Images/Index/Materials/shadow-storm.webp"></a>
+                        <a href="Images/Index/Materials/shadow-storm.webp" data-lightbox="ourMaterialsGallery16" data-title="SHADOW STORM"><img src="Images/Index/Materials/shadow-storm.webp"></a>
                         <p>shadow storm</p>
                     </div>
                     <div class="swiper-slide">
@@ -216,7 +216,7 @@
                         <p>white pearl</p>
                     </div>
                     <div class="swiper-slide">
-                       <a href="Images/Index/Materials/white-soul.webp" data-lightbox="ourMaterialsGallery22" data-title="WHITE SOUL"><img src="Images/Index/Materials/white-soul.webp"></a>
+                        <a href="Images/Index/Materials/white-soul.webp" data-lightbox="ourMaterialsGallery22" data-title="WHITE SOUL"><img src="Images/Index/Materials/white-soul.webp"></a>
                         <p>white soul</p>
                     </div>
                 </div><!--
@@ -244,30 +244,30 @@
                 <div>
                     <img src="Images/Index/Carried-Out/imagem2.webp">
                 </div><!--
-                <div>
-                    <img src="Images/Index/Carried-Out/imagem3.webp">
-                </div>-->
+<div>
+<img src="Images/Index/Carried-Out/imagem3.webp">
+</div>-->
                 <div>
                     <img src="Images/Index/Carried-Out/imagem4.webp">
                 </div>
                 <div>
                     <img src="Images/Index/Carried-Out/imagem5.webp">
                 </div><!--
-                <div>
-                    <img src="Images/Index/Carried-Out/imagem6.webp">
-                </div>-->
+<div>
+<img src="Images/Index/Carried-Out/imagem6.webp">
+</div>-->
                 <div>
                     <img src="Images/Index/Carried-Out/imagem7.webp">
                 </div><!--
-                <div>
-                    <img src="Images/Index/Carried-Out/imagem8.webp">
-                </div>-->
+<div>
+<img src="Images/Index/Carried-Out/imagem8.webp">
+</div>-->
                 <div>
                     <img src="Images/Index/Carried-Out/imagem9.webp">
                 </div><!--
-                <div>
-                    <img src="Images/Index/Carried-Out/imagem10.webp">
-                </div>-->
+<div>
+<img src="Images/Index/Carried-Out/imagem10.webp">
+</div>-->
                 <div>
                     <img src="Images/Index/Carried-Out/imagem11.webp">
                 </div>
@@ -382,17 +382,20 @@
 
         <section class="our-finishes">
             <h2>Our finishes<br>with the</h2>
-            <h1>best quality</h1><!--
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-                Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-            </p>-->
+            <h1>best quality</h1>
+            <!--
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+</p>-->
         </section>
 
 
         <section class="contato justify-content-center" id="contact">
             <div class="logo">
-                <img src="Images/Form/logo.webp">
+                <!--<img src="Images/Form/logo.webp">-->
+                <h2>PROJECTS</h2>
+                <h1>CARRIED OUT</h1>
             </div>
             <div class="form">
                 <h1>MAKE YOUR BUDGET</h1>
@@ -414,7 +417,7 @@
         <?php
         include 'php/footer.html';
         ?>
-        
+
     </body>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
