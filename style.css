@@ -165,19 +165,25 @@ header nav .fundo{
     width: 350px;
 }
 
+.body-menu-fixed{
+    width: 100% !important;
+    max-width: 1366px;
+    position: fixed;
+    background-color: aqua;
+    bottom: 30%;
+    z-index: 10;
+}
+
 .menu-fixed{
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(255,255,255,0.8);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: absolute;
     width: 70px;
     height: 130px;
-    position: fixed;
-    bottom: 20%;
-    z-index: 10;
-    border-bottom-right-radius: 30px;
-    border-top-right-radius: 30px;
+    right: 0;
 }
 
 .menu-fixed a{
@@ -379,12 +385,12 @@ header nav .fundo{
 }
 
 .best-sellers h1{
-    font-size: 5em;
-    margin-bottom: 30px !important;
+    font-size: 3em;
+    margin-bottom: 20px !important;
 }
 
 .best-sellers h2{
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 .best-sellers .mySwiper{
@@ -478,13 +484,13 @@ header nav .fundo{
 }
 
 .materials h2{
-    font-size: 2.5rem; 
+    font-size: 2rem; 
     padding: 0 !important;
 }
 
 .materials h1{
-    font-size: 5em;
-    margin-bottom: 30px !important;
+    font-size: 3em;
+    margin-bottom: 20px !important;
 }
 
 .materials .mySwiper{
@@ -512,12 +518,12 @@ header nav .fundo{
 }
 
 .carried-out h1{
-    font-size: 5em;
+    font-size: 3em;
     margin-bottom: 20px !important;
 }
 
 .carried-out h2{
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 .menu{
@@ -596,13 +602,13 @@ header nav .fundo{
 }
 
 .quarry-info h2{
-    font-size: 1.65em;
+    font-size: 1.1em;
     width: 50%;
     margin-right: 10px !important;
 }
 
 .quarry-info h1{
-    font-size: 6em;
+    font-size: 4em;
 }
 
 .quarry-info h1:nth-child(2){
@@ -645,17 +651,18 @@ header nav .fundo{
     display: flex !important;
     align-items: center;
     flex-wrap: wrap;
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 .our-finishes h2{
-    width: 35%;
+    width: 40%;
     text-align: right;
+    font-size: 1.2em;
 }
 
 .our-finishes h1{
-    width: 65%;
-    font-size: 7em;
+    width: 60%;
+    font-size: 4em;
 }
 
 .our-finishes p{
@@ -670,7 +677,7 @@ header nav .fundo{
 .contato{
     display: flex;
     flex-direction: row;
-    padding: 50px 0;
+    padding: 0px 0 20px 0;
 }
 
 .contato .logo{
@@ -682,7 +689,7 @@ header nav .fundo{
 }
 
 .contato .logo img{
-    width: 80%;
+    width: 60%;
 }
 
 .contato .form{
@@ -798,11 +805,11 @@ footer p{
 }
 
 .our-company-page .company-info .title h2{
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .our-company-page .company-info .title h1{
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .our-company-page .company-info .text{
@@ -828,11 +835,11 @@ footer p{
 }
 
 .materials-page .all-materials h2{
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 .materials-page .all-materials h1{
-    font-size: 5em;
+    font-size: 3em;
 }
 
 .container-imagens{
@@ -1284,12 +1291,12 @@ footer p{
 
 
     h1{
-        font-size: 4em !important;
+        font-size: 3em !important;
         margin-bottom: 15px !important;
     }
 
     h2{
-        font-size: 2.5em !important;
+        font-size: 2em !important;
     }
 
     .best-sellers .mySwiper{

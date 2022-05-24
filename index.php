@@ -281,7 +281,7 @@
         </section>
 
 
-        <div id="quarry-carousel" class="carousel vert slide" data-ride="carousel" data-interval="5000" data-pause="false">
+        <div id="quarry-carousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="false">
             <ol class="carousel-indicators">
                 <li data-target="#quarry-carousel" data-slide-to="0" id="0" class="active"></li>
                 <li data-target="#quarry-carousel" data-slide-to="1"></li>
