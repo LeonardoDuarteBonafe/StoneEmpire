@@ -394,8 +394,8 @@ Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh
         <section class="contato justify-content-center" id="contact">
             <div class="logo">
                 <!--<img src="Images/Form/logo.webp">-->
-                <h2>PROJECTS</h2>
-                <h1>CARRIED OUT</h1>
+                <h1>CONTACT US</h1>
+                <!--<h2>US</h2>-->
             </div>
             <div class="form">
                 <h1>MAKE YOUR BUDGET</h1>
