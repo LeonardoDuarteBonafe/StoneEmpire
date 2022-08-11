@@ -19,7 +19,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <link rel="icon" href="Images/Site-Icon/site-icon.webp">
-    <title>Amazonic</title>
+    <title>Stone Empire</title>
 
     <body class="our-company-page">
         
